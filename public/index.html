@@ -1,40 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>Helix React App</title>
     <meta charset="utf-8">
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="theme-color" content="#000000">
-    <!--
-      manifest.json provides metadata used when your web app is added to the
-      homescreen on Android. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+    <link rel="shortcut icon" href="../favicon.png">
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <!-- DO NOT BUNDLE: HelixUI Styles -->
+    <link rel="stylesheet" href="https://unpkg.com/helix-ui@0.14.0/dist/styles/helix-ui.css" />
+    <!-- DO NOT COMPILE: Converts ES5 custom element constructor functions to ES6 classes -->
+    <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2/custom-elements-es5-adapter.js"></script>
+    <!-- DO NOT COMPILE: Appends polyfills to <head> if needed by user's browser. -->
+    <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2/webcomponents-loader.js"></script>
   </head>
-  <body>
-    <noscript>
-      You need to enable JavaScript to run this app.
-    </noscript>
-    <div id="root"></div>
+  <body class="hxVertical" id="top">
+    <header id="head">
+    </header>
+
+    <div id="app"></div>
+
+    <footer id="foot">
+      &copy; 2018 Rackspace US, Inc.
+      <nav>
+        <a href="https://www.rackspace.com/information/legal/websiteterms">Website Terms</a>
+        <a href="https://www.rackspace.com/information/legal/privacystatement">Privacy Policy</a>
+      </nav>
+    </footer>
+
     <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
+      DO NOT BUNDLE: ES5-compiled assets specifically for use in the browser.
+      Provides additional polyfills and automatically initializes HelixUI.
     -->
+    <script src="https://unpkg.com/helix-ui@0.14.0/dist/scripts/helix-ui.browser.min.js"></script>
+    <a id="bottom"></a>
   </body>
 </html>
